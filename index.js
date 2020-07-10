@@ -9,6 +9,7 @@ const breakfastBurrito = {
 };
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
+console.log(":   :  : :::TASK 1A::: :  :   :")
 
 function createMenuItem(name, price, category) {
 	let menu = {};
@@ -17,7 +18,7 @@ function createMenuItem(name, price, category) {
 	menu.category = category;
 	return menu;
 }
-createMenuItem("Pie", 10, "Dessert");
+console.log(createMenuItem("Pie", 10, "Dessert"));
 // console.log(menu);
 console.log(createMenuItem("xxx", 10000, "XXXX")); // THIS LOG DOESNT LOG THE FUNCTION BUT RATHER ITSELF
 // I DONT UNDERSTAND WHY RETURN MENU IS HELPING MAKE CONSOLE.LOG WORK
@@ -82,9 +83,13 @@ const reviews = [
 ];
 
 /* Task 3: Console.log just Julius' feedback */
-
+console.log(reviews[5].feedback);
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-
+reviews.unshift({
+	name: "Greg",
+	rating: "4",
+	feedback: "This is really great."
+})
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
