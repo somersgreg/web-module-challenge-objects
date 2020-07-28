@@ -21,6 +21,9 @@ function createMenuItem(name, cost, category) {
 console.log(createMenuItem('Salad', 10, 'App'));
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+console.log(createMenuItem('Kobe Steak', 145, 'Entree'));
+console.log(createMenuItem('Wagu Burger', 150, 'Entree'));
+console.log(createMenuItem('Pumpkin Curry', 12, 'Entree'));
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
@@ -31,6 +34,22 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+const burger1 = {
+	name: 'Burger',
+	price: 18,
+	category: 'Lunch',
+	discount: function (str) {
+		if (str === 'teacher' || str === 'student') {
+			return this.price * 0.75;
+		} else {
+			return this.price * 0.9;
+		}
+	},
+};
+
+console.log(burger1.discount('teacher'));
+console.log(burger1.discount('public'));
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -75,7 +94,13 @@ const reviews = [
 ];
 
 /* Task 3: Console.log just Julius' feedback */
+console.log(reviews[5].feedback);
 
+reviews.forEach((item) => {
+	if (item.name.includes('Julius')) {
+		console.log(item.feedback);
+	}
+});
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
