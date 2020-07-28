@@ -107,6 +107,7 @@ const reviews = [
 ];
 
 /* Task 3: Console.log just Julius' feedback */
+
 console.log(reviews[5].feedback);
 
 reviews.forEach((item) => {
@@ -116,6 +117,7 @@ reviews.forEach((item) => {
 });
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+
 const newReview = {
 	name: 'Eddie',
 	rating: 4,
@@ -144,6 +146,7 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
+
 function getReviewByIndex(array, i) {
 	let str = `${array[i].name} gave the restaurant a ${array[i].rating}, and their feedback was: ${array[i].feedback}`;
 
@@ -161,6 +164,7 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
+
 function getLastReview(array) {
 	let lastIndex = array.length - 1;
 	let str = `${array[lastIndex].name} gave the restaurant a ${array[lastIndex].rating}, and their feedback was: "${array[lastIndex].feedback}"`;
